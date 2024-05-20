@@ -1,0 +1,28 @@
+﻿version: "3.9"  # optional since v1.27.0
+
+services:
+    db:
+        image: mysql:8.4.0
+        volumes:
+            - datafiles:/var/lib/mysql
+        environment: 
+            MYSQL_RANDOM_ROOT_PASSWORD: 1
+        restart: always
+        env_file:
+            - secrets.env
+
+    web_api:
+        depends_on:
+            - db
+        image: noteswebapi
+        container_name: NotesWebApi_sample
+        ports:
+            - "5200:80"
+        environment: 
+            - ASPNETCORE_ENVIRONMENT=Development
+            - MYSQL_SERVER_NAME=${MYSQL_SERVER_NAME}
+        env_file:
+            - secrets.env
+
+volumes:
+    datafiles:
