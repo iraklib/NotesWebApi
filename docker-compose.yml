@@ -3,8 +3,8 @@
 services:
     web_api:
         build: . 
-        #image: noteswebapi
-        #container_name: NotesWebApi_sample
+        image: noteswebapi_api
+        container_name: NotesWebApi
         ports:
             - "5200:80"
         environment: 
