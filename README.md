@@ -1,6 +1,6 @@
 # NotesWebApi
-### Asp.Net WebApi with Persistent MySQL 
-### Run following docker commands:
+### Asp.Net WebApi with Persistent Data in MySQL
+### Run following docker command:
 - docker-compose up --build -d
 ### Navigate to http://localhost:5200/swagger/index.html
 ### Add new notes
