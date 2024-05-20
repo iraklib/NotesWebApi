@@ -13,4 +13,4 @@ curl -X 'POST' \
   "created": "2024-05-20T14:53:11.250Z"
 }'
 ### List all notes
-curl -X GET http://localhost:5200/api/NoteModels
+curl -X GET http://localhost:5200/NoteModels
