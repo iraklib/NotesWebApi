@@ -5,7 +5,7 @@
 ### Run following docker command:
 
 ```sh
-- docker-compose up --build -d
+docker-compose up --build -d
 ```
 
 ### Navigate to http://localhost:5200/swagger/index.html
